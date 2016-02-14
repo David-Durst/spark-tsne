@@ -1,9 +1,16 @@
 language: scala
+
 scala:
   - 2.10.5
+
 jdk:
   - oraclejdk7
-  - openjdk6
+  - openjdk7
 
-script: sbt ++$TRAVIS_SCALA_VERSION test
+script: "sbt ++$TRAVIS_SCALA_VERSION clean coverage test"
 
+after_success: "sbt coveralls"
+
+env:
+  global:
+    - secure: c6Ns75kyA9mSwzr2nIiPYWa2dEe/Sk08k6Q4pzFnGhgouxoGISalTGHL1aflAQvjaWoVKDBpAP9dD2gjn2VJLuuynzSC9FVzqteJm7XCv/I+msokTE+7Y/Put5TFAaiE/R3ZDCkX1YKXi43+HIsWw5x3uec6LmyGIIerdL9qoEji/Gxnd6lAoCIB4u4xcpGEotAb4Uj3zR5kwgYR0vz0GZdX/iT3OCriU3BwTLZ8WvA2wHN9aLxAwW6B5hJEdFU0mwo4tG+HzqMQxXhjzkYWdt8sI7OtBfKm+uHyeamUbpjKs6REgmO4q9YluhX1aa2iuyYFOZpGaF4Vy0XZN2ffS7Tv4QcoSM1c0TefDsjlvYitjKVJ0Fc+LgGwTbqS7L/AOaW7A4Ym3cngf538w9sZYZTG9V/0116Ji6EbcXYNu/K/V0rJLEaJ1Pkcy1Ysb6m0Sb3CIop1mPeZKyXbIR/FFTB8KYJuT4fuDdCaOhhd8JbPKUwGz8EfzPGZH00nhXOawfaAhsVNZ2cY5DMPTaddNKAfjfU07lN2RmVZ0KTg/Owo4+/m8NUaWwcMh+LFQTY533G9gM2EzFf91b1NiSWDxYC2ZX+6OsbczQHQZAU2fJ4YRD78P/l46tnnkTl9hEbcbMXrJhL60J9tg8ZH+D/1nV4Z+U+Ch70kTB5nscLxoyI=
