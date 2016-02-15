@@ -2,6 +2,10 @@
 
 [![Join the chat at https://gitter.im/saurfang/spark-tsne](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/saurfang/spark-tsne?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+[![Coverage Status](https://coveralls.io/repos/github/David-Durst/spark-tsne/badge.svg?branch=master)](https://coveralls.io/github/David-Durst/spark-tsne?branch=master)
+
+[![Build Status](https://travis-ci.org/David-Durst/spark-tsne.svg?branch=master)](https://travis-ci.org/David-Durst/spark-tsne)
+
 Distributed [t-SNE](http://lvdmaaten.github.io/tsne/) with Apache Spark. WIP...
 
 t-SNE is a dimension reduction technique that is particularly good for visualizing high
